@@ -1,8 +1,5 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import NavBar from '../NavBar';
-
-
 
 const Dashboard = (props) => {
 
@@ -13,7 +10,6 @@ const Dashboard = (props) => {
 
     return (
             <div>
-                <NavBar />
                 Dashboard
             </div>
     )

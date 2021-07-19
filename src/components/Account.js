@@ -1,14 +1,12 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import NavBar from './NavBar';
 
 const Account = (props) => {
 
     const accountInfo = useSelector(state => state.accountInfo);
 
     return (
-        <div>
-            <NavBar />
+        <div className='container'>
             <h4>Account Info</h4>
             <p><b>Name: </b> {accountInfo.username}</p>
             <p><b>Email: </b>{accountInfo.email}</p>

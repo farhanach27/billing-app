@@ -12,6 +12,7 @@ import Register from "../userAuth/Register";
 import Account from "../Account";
 import CustomerContainer from "../customer/CustomerContainer";
 import ProductContainer from "../product/ProductContainer";
+import CartContainer from "../cart/CartContainer";
 
 const Routes = () => {
 
@@ -21,10 +22,6 @@ const Routes = () => {
 
     return ( 
         <div>
-            <Link to='/'></Link>
-            <Link to='/register'></Link>
-            <Link to='/dashboard'></Link>
-            <Link to='/account'></Link>
 
             <Switch>
                 <PublicRoute path='/' component={Login} exact={true} />
@@ -33,6 +30,7 @@ const Routes = () => {
                 <PrivateRoute path='/account' component={Account} exact={true}/>
                 <PrivateRoute path='/customers' component={CustomerContainer} exact={true}/>
                 <PrivateRoute path='/products' component={ProductContainer} exact={true}/>
+                <PrivateRoute path='/cart' component={CartContainer} exact={true}/>
             </Switch>
         </div>
             

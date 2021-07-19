@@ -7,6 +7,7 @@ import App from './App';
 import { startGetUserDetails } from './actions/userAuthActions';
 import { startGetAllCustomers } from './actions/customerActions';
 import { startGetAllProducts } from './actions/productsActions';
+import { BrowserRouter } from 'react-router-dom';
 
 
 
@@ -27,7 +28,9 @@ store.subscribe(() => {
 
 ReactDOM.render(
     <Provider store = {store}>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </Provider>
   ,
   document.getElementById('root')

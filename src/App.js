@@ -5,6 +5,7 @@ import Routes from './components/helpers/Routes';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { setLoginStatus } from './actions/userAuthActions';
+import NavBar from './components/NavBar';
 
 
 const App = () => {
@@ -18,12 +19,9 @@ const App = () => {
   })
 
   return (
-    <BrowserRouter>
         <div className='App'>
-          <Routes />
+          <NavBar />
         </div>
-    </BrowserRouter>
-    
   );
 }
 
