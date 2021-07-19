@@ -21,14 +21,14 @@ export const startRegisterUser = (userData, history) => {
 }
 
 
-export const startLoginUser = (userData, history) => {
+export const startLoginUser = (userData, history, handleServerErrors) => {
     return (dispatch) => {
         axios.post('/api/users/login', userData)
            .then( (res) => {
                 const result = res.data
                 console.log(result)
                 if(result.hasOwnProperty('errors')){
-                    swal('Error', result.errors ,'error')
+                    handleServerErrors(result)
                 } else {
                     swal('Successfully', 'Logged In', 'success')
                     localStorage.setItem('token', result.token)

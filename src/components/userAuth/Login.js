@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import '../commons/Forms.css'
@@ -9,6 +9,7 @@ import { startLoginUser } from '../../actions/userAuthActions';
 
 
 const Login  = (props) => {
+    const[serverErrors, setServerErrors] = useState({})
 
     const dispatch = useDispatch();
 
@@ -34,7 +35,10 @@ const Login  = (props) => {
                 }}
                 validationSchema={validate}
                 onSubmit={values => {
-                    dispatch(startLoginUser(values, props.history));
+                    const handleServerErrors = (err) =>{
+                        setServerErrors(err)
+                    }
+                    dispatch(startLoginUser(values, props.history, handleServerErrors));
                 }}
             >
                 {formik => (
@@ -45,8 +49,10 @@ const Login  = (props) => {
                             <TextField label='Email' name='email' type='email'/>
                             <TextField label='Password' name='password' type='password'/>
                             <button className='btn btn-primary mt-3' type='submit'> Log in </button>
+                             <p className='error'>{serverErrors.error}</p>
                         </Form>
                         <br/>
+                        <p className='text-center error'>{serverErrors.errors}</p>
                         <center><p>Don't have an account? <Link to='/register'>Register</Link></p></center>
                     </div>
                 )}

@@ -11,12 +11,12 @@ const ProductContainer = (props) => {
         <div className='container'>
             <div className='row'>
                 <div className='col-md-3'>
-                    <h4>Add new product</h4>
+                    <h4 className='text-center'>Add new product</h4>
                     <ProductForm />
                 </div>
                 <div className='col-md-6'>
                     {products.length === 0 ? (
-                        <div>
+                        <div className='text-center'>
                             <h4>No product's present.</h4>
                             <p>Add your first product now.</p>
                         </div>

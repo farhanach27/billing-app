@@ -8,7 +8,7 @@ const CustomerListing = () => {
 
     return (
         <div>
-            <h4>No of Customer's - {customers.length} </h4>
+            <h4 className='text-center'>No of Customer's - {customers.length} </h4>
             <div className='table-responsive'>
                 <table border={1} className='table table-striped'>
                     <thead>
