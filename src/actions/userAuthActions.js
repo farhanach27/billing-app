@@ -1,6 +1,8 @@
 import axios from '../config/axiosConfig';
 import swal from 'sweetalert';
 import { startGetAllCustomers } from './customerActions';
+import { startGetAllProducts } from './productsActions';
+import { startGetAllBills } from './billsActions';
 
 export const startRegisterUser = (userData, history) => {
     return ( 
@@ -34,9 +36,11 @@ export const startLoginUser = (userData, history, handleServerErrors) => {
                     localStorage.setItem('token', result.token)
                     dispatch(setLoginStatus())
                     history.push('/dashboard')
-                    window.location.reload()
+                    //window.location.reload()
                     dispatch(startGetUserDetails())
                     dispatch(startGetAllCustomers())
+                    dispatch(startGetAllProducts())
+                    dispatch(startGetAllBills())
                 }
             })
             .catch( (err) => {
