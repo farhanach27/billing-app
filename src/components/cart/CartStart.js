@@ -6,7 +6,7 @@ const CartStart = (props) => {
     const accountInfo = useSelector(state=>state.accountInfo)
     const date = dateFormatter(new Date().toISOString())
     return (
-        <div className='container' style={{display:'flex', justifyContent:'space-between',margin:'20px'}}>
+        <div style={{display:'flex', justifyContent:'space-between',margin:'20px'}}>
             
             <div className="form-group  justify-content-start">
                 <label>Business-Name:</label>

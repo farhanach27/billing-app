@@ -32,7 +32,7 @@ const CartBody = (props) => {
         } else {
             alert('customer does not exist')
             setMobile('')
-            // props.history.push('/customers')
+            props.history.push('/customers')
         }
     }
 
@@ -71,12 +71,8 @@ const CartBody = (props) => {
                     <label>Name</label>
                     <input className="form-control" type="text" defaultValue={name} disabled={true}/>
                 </div>
-                <div className="form-group col-4">
-                    <label>Add New Customer</label><br/>
-                    <button className='btn btn-primary'><AiOutlineUsergroupAdd/></button>
-                    
-                </div>
             </form>
+
             <AddProducts
                 addLineItem={addLineItem} modalShow={modalShow}
             />

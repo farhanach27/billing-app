@@ -14,6 +14,8 @@ const ProductContainer = (props) => {
                     <h4 className='text-center'>Add new product</h4>
                     <ProductForm />
                 </div>
+                <div className='col-md-2'>
+                </div>
                 <div className='col-md-6'>
                     {products.length === 0 ? (
                         <div className='text-center'>

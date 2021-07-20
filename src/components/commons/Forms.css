@@ -12,6 +12,9 @@
 .customer-form, .product-form {
     width: fit-content;
     height: fit-content;
+    padding: 40px 55px 40px 55px;
+    border-radius: 5px;
+    background-color:#d6c2c2;
 }
 
 .register-img{

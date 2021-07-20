@@ -28,7 +28,7 @@ const RemoveCustomer = ( {id} ) => {
     }
 
     return (
-        <button style={{color:'red'}} className='btn' onClick={() => {removeCustomer(id)}}><MdDelete/></button>
+        <button style={{color:'red'}} className='btn' onClick={() => {removeCustomer(id)}}><MdDelete size='1.5rem'/></button>
     )
 }
 

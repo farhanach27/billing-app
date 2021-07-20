@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import swal from 'sweetalert';
 import { resetAccountInfo, resetLogInStatus } from '../actions/userAuthActions';
 import Routes from './helpers/Routes';
-import './footer.css'
 
 const NavBar = () => {
 

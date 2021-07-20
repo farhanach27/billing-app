@@ -14,6 +14,8 @@ const CustomerContainer = (props) => {
                     <h4 >Add new customer</h4>
                     <CustomerForm />
                 </div>
+                <div className='col-md-2'>
+                </div>
                 <div className='col-md-6'>
                     {customers.length === 0 ? (
                         <div className='text-center'>

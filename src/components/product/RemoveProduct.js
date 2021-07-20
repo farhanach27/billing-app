@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import swal from 'sweetalert';
 import { startRemoveProduct } from '../../actions/productsActions';
+import {MdDelete} from 'react-icons/md'
 
 
 const RemoveProduct = ( {id} ) => {
@@ -28,7 +29,7 @@ const RemoveProduct = ( {id} ) => {
     }
 
     return (
-        <button className='btn btn-danger' onClick={() => {removeProduct(id)}}>Delete</button>
+        <button style={{color:'red'}} className='btn' onClick={() => {removeProduct(id)}}><MdDelete size='1.5rem'/></button>
     )
 }
 

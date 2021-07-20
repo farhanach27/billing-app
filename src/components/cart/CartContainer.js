@@ -4,7 +4,7 @@ import CartStart from './CartStart'
 
 const CartContainer = () => {
     return (
-        <div style={{margin:'10px', width:'100%',textAlign:'center', position:'relative'}}>
+        <div className='container' style={{margin:'10px', width:'100%',textAlign:'center', position:'relative'}}>
             <h4>Cart</h4>
             <div className="bill-container">
                 <CartStart />

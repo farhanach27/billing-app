@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Button } from 'react-bootstrap';
 import EditCustomer from './EditCustomer';
 import RemoveCustomer from './RemoveCustomer';
+import {MdEdit} from 'react-icons/md'
 
 const CustomerItem = ({customer, index}) => {
     const [editModalShow, setEditModalShow] = useState(false); 
@@ -12,9 +12,9 @@ const CustomerItem = ({customer, index}) => {
             <td>{customer.name}</td>
             <td>{customer.mobile}</td>
             <td>
-                <Button  onClick={() => setEditModalShow(true)}>
-                    Edit
-                </Button>
+                <button  className='btn' style={{color:'blue'}} onClick={() => setEditModalShow(true)}>
+                    <MdEdit size='1.5rem'/>
+                </button>
 
                 <EditCustomer
                     show={editModalShow}
