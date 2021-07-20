@@ -36,7 +36,7 @@ export const startLoginUser = (userData, history, handleServerErrors) => {
                     localStorage.setItem('token', result.token)
                     dispatch(setLoginStatus())
                     history.push('/dashboard')
-                    //window.location.reload()
+                    window.location.reload()
                     dispatch(startGetUserDetails())
                     dispatch(startGetAllCustomers())
                     dispatch(startGetAllProducts())
