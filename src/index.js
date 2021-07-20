@@ -8,6 +8,7 @@ import { startGetUserDetails } from './actions/userAuthActions';
 import { startGetAllCustomers } from './actions/customerActions';
 import { startGetAllProducts } from './actions/productsActions';
 import { BrowserRouter } from 'react-router-dom';
+import { startGetAllBills } from './actions/billsActions';
 
 
 
@@ -16,7 +17,8 @@ const store = configureStore();
 if(localStorage.getItem('token')){
   store.dispatch(startGetUserDetails());
   store.dispatch(startGetAllCustomers());
-  store.dispatch(startGetAllProducts())
+  store.dispatch(startGetAllProducts());
+  store.dispatch(startGetAllBills())
 }
 
 console.log('state', store.getState());

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import '../commons/Forms.css'
@@ -13,7 +13,14 @@ const Login  = (props) => {
 
     const dispatch = useDispatch();
 
+    useEffect (() => {
+        const timeout = setTimeout(() => {
+             setServerErrors({})
+        }, 15000);
+        
+    },[serverErrors]);
     
+
 
     const validate = Yup.object({
         email: Yup.string()
@@ -27,36 +34,50 @@ const Login  = (props) => {
    
 
     return (
-        <div className='login-form'>
+        <div className='container'>
+            <div className='row'>
             <Formik 
                 initialValues={{
                     email: '',
                     password: '',
                 }}
                 validationSchema={validate}
-                onSubmit={values => {
+                onSubmit={(values, onSubmitProps) => {
                     const handleServerErrors = (err) =>{
                         setServerErrors(err)
                     }
                     dispatch(startLoginUser(values, props.history, handleServerErrors));
+                    onSubmitProps.resetForm();
                 }}
             >
                 {formik => (
 
-                    <div className='form-group'>
-                        <h3><center>Log In</center></h3>
-                        <Form>
-                            <TextField label='Email' name='email' type='email'/>
-                            <TextField label='Password' name='password' type='password'/>
-                            <button className='btn btn-primary mt-3' type='submit'> Log in </button>
-                             <p className='error'>{serverErrors.error}</p>
-                        </Form>
-                        <br/>
-                        <p className='text-center error'>{serverErrors.errors}</p>
-                        <center><p>Don't have an account? <Link to='/register'>Register</Link></p></center>
+                    <div >
+                        <div className='col-sm-6'>
+                        <h3>Sign Up with Us and find solution for your  Business</h3>
+                        </div>
+                        
+                        <div className='form-group login-form col-sm-6'>
+                            <h3><center>Log In</center></h3>
+
+                            <Form>
+                                <TextField label='Email' name='email' type='email'/>
+                                <TextField label='Password' name='password' type='password'/>
+                                <button className='btn btn-primary mt-3' type='submit'> Log in </button>
+                                {serverErrors.hasOwnProperty('errors') &&
+                                    <>
+                                        <p className='mt-3 text-center error'>{serverErrors.errors}</p>  
+                                    </>
+                                }                       
+                            </Form>
+                            <br/>
+                            <center><p>Don't have an account? <Link to='/register'>Register</Link></p></center>
+                        </div>
                     </div>
                 )}
             </Formik>
+            </div>
+            
         </div>  
         
     )
