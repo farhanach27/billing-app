@@ -21,16 +21,16 @@ const StatsContainer = (props) => {
             <>
                 <div className="row d-flex mt-2 ml-1">
                     <div className="col-3">
-                        <Stats variant="Info" Header="Customers" value={totalCustomers}/>
+                        <Stats variant="Warning" Header="Customers" value={totalCustomers}/>
                     </div>
                     <div className="col-3">
-                        <Stats variant="Warning" Header="Orders" value={totalOrders}/>
+                        <Stats variant="Danger" Header="Orders" value={totalOrders}/>
                     </div>
                     <div className="col-3">
-                        <Stats variant="Success" Header="Total Revenue" value={totalRevenue}/>
+                        <Stats variant="Info" Header="Total Revenue" value={totalRevenue}/>
                     </div>
                     <div className="col-3">
-                        <Stats variant="Danger" Header="Inventory" value={totalProductsInInventory}/>
+                        <Stats variant="Success" Header="Inventory" value={totalProductsInInventory}/>
                     </div>
                 </div>
                 <div className="row d-flex justify-content-center mt-2">
