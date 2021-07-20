@@ -59,7 +59,7 @@ const InvoiceModal = (props) => {
             <div className="flex-column col-12">
               <CartStart />
               <div className="mx-4">
-                <strong>Bill To :</strong>
+                <strong>Customer Details:</strong>
                 <div className="p-2">
                   <h6>Customer Name: {findCustomer(customer, customers).name}</h6>
                   <h6>Contact Number: {findCustomer(customer, customers).mobile}</h6>
@@ -76,7 +76,7 @@ const InvoiceModal = (props) => {
                   <th>Product Name</th>
                   <th>Unit Price</th>
                   <th>Quantity</th>
-                  <th>Total</th>
+                  <th>Item Total</th>
                 </tr>
               </thead>
               <tbody>

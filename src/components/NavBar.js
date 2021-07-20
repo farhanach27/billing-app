@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import swal from 'sweetalert';
 import { resetAccountInfo, resetLogInStatus } from '../actions/userAuthActions';
 import Routes from './helpers/Routes';
+import './footer.css'
 
 const NavBar = () => {
 
@@ -16,10 +17,11 @@ const NavBar = () => {
         <>
             {
             loginStatus ? (
+                <div>
                 <header>
                     <nav className="navbar navbar-light bg-light">
                         <span className="navbar-brand mb-0 h1">Billing</span>
-                        <Link to='/dashboard'>Dashboard</Link>
+                        <Link className='nav' to='/dashboard'>Dashboard</Link>
                         <Link to='/account'>Account</Link>
                         <Link to='/customers'>Customers</Link>
                         <Link to='/products'>Products</Link>
@@ -36,15 +38,15 @@ const NavBar = () => {
                         
                     </nav>    
                 </header>    
+                
+                </div>
             ) : (
                 null
             )
         }
 
         <Routes />
-        </>
-        
-          
+        </>     
     )
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import swal from 'sweetalert';
 import { startRemoveCustomer } from '../../actions/customerActions';
-
+import {MdDelete} from 'react-icons/md'
 
 const RemoveCustomer = ( {id} ) => {
     const dispatch = useDispatch();
@@ -28,7 +28,7 @@ const RemoveCustomer = ( {id} ) => {
     }
 
     return (
-        <button className='btn btn-danger' onClick={() => {removeCustomer(id)}}>Delete</button>
+        <button style={{color:'red'}} className='btn' onClick={() => {removeCustomer(id)}}><MdDelete/></button>
     )
 }
 

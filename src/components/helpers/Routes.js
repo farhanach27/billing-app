@@ -13,6 +13,7 @@ import Account from "../Account";
 import CustomerContainer from "../customer/CustomerContainer";
 import ProductContainer from "../product/ProductContainer";
 import CartContainer from "../cart/CartContainer";
+import BillContainer from "../bill/BillContainer";
 
 
 const Routes = () => {
@@ -32,6 +33,7 @@ const Routes = () => {
                 <PrivateRoute path='/customers' component={CustomerContainer} exact={true}/>
                 <PrivateRoute path='/products' component={ProductContainer} exact={true}/>
                 <PrivateRoute path='/cart' component={CartContainer} exact={true}/>
+                <PrivateRoute path='/bills' component={BillContainer} exact={true}/>
             </Switch>
         </div>
             

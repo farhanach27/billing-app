@@ -1,19 +1,15 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react'
+import { useSelector } from 'react-redux'
+import StatsContainer from './StatsContainer'
 
 const Dashboard = (props) => {
-
-    const loginStatus = useSelector((state) => state.loginStatus );
-
-    const dispatch = useDispatch();
-    
-
+    const account = useSelector(state=>state.account)
     return (
-            <div>
-                Dashboard
-            </div>
+        <div type='container'>
+            <h2 style={{color:'#4D7DE3'}}>Dashboard</h2>
+            <StatsContainer />
+        </div>
     )
 }
-
 
 export default Dashboard;
