@@ -72,7 +72,7 @@ const InvoiceModal = (props) => {
           <table className="table text-center">
               <thead>
                 <tr>
-                  <th>SlNo</th>
+                  <th>#</th>
                   <th>Product Name</th>
                   <th>Unit Price</th>
                   <th>Quantity</th>
@@ -92,11 +92,15 @@ const InvoiceModal = (props) => {
                     </tr>
                   )
                 })}
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><b>Total -</b></td>
+                    <td><b> {total} </b></td>
+                </tr>
               </tbody>
           </table>
-          <div className="row pt-3 justify-content-end">
-            <h5 className='justify-content-end'>Total - <strong><i style={{fontSize:'17px'}} className="fas fa-rupee-sign"></i> {total}</strong></h5>
-          </div>
         </Modal.Body>
         <Modal.Footer>
           

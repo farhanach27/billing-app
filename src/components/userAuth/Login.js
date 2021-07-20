@@ -54,7 +54,7 @@ const Login  = (props) => {
 
                     <div >
                         <div className='col-sm-6'>
-                        <h3>Sign Up with Us and find solution for your  Business</h3>
+                        <p>Sign Up with Us and find solution for your  Business</p>
                         </div>
                         
                         <div className='form-group login-form col-sm-6'>

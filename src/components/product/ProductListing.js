@@ -6,10 +6,18 @@ const ProductListing = () => {
 
     const products = useSelector(state => state.products);
 
+
+    const tableStyle = {
+        padding:'10px',
+        paddingTop:'30px',
+        backgroundColor:'white',
+        boxShadow: '0 5px 5px -5px #888888'
+    }
+
     return (
         <div>
             <h4 className='text-center'>No of product's - {products.length} </h4>
-            <div className='table-responsive'>
+            <div style={tableStyle} className='table-responsive'>
                 <table border={1} className='table table-striped'>
                     <thead>
                         <tr>

@@ -10,13 +10,13 @@ const CartStart = (props) => {
             
             <div className="form-group  justify-content-start">
                 <label>Business-Name:</label>
-                <input type="text" defaultValue={`${accountInfo.businessName} - ${accountInfo.address}`} disabled={true}/>
+                <h6>{accountInfo.businessName} - {accountInfo.address}</h6>
             </div>
                     
                     
             <div className="form-group  justify-content-end">
                 <label >Date:</label>
-                <input type="text" defaultValue={date} disabled={true}/>
+                <h6>{date}</h6>
             </div>
         </div>
     )

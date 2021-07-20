@@ -6,10 +6,17 @@ const CustomerListing = () => {
 
     const customers = useSelector(state => state.customers);
 
+    const tableStyle = {
+        padding:'10px',
+        paddingTop:'30px',
+        backgroundColor:'white',
+        boxShadow: '0 5px 5px -5px #888888'
+    }
+
     return (
         <div>
             <h4 className='text-center'>No of Customer's - {customers.length} </h4>
-            <div className='table-responsive'>
+            <div className='table-responsive' style={tableStyle}>
                 <table border={1} className='table table-striped'>
                     <thead>
                         <tr>

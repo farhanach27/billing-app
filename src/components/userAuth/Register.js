@@ -9,8 +9,13 @@ import TextField from '../commons/TextField';
 import TextArea from '../commons/TextArea';
 
 
-
 const Register  = (props) => {
+
+    const formStyle = {
+        padding:'10px',
+        marginTop:'auto',
+        paddingTop:'30px',
+    }
 
     const dispatch = useDispatch();
 
@@ -29,6 +34,7 @@ const Register  = (props) => {
    
 
     return (
+        <div style={formStyle}>
         <div className='register-form'>
             <Formik 
                 initialValues={{
@@ -62,7 +68,7 @@ const Register  = (props) => {
                 )}
             </Formik>
         </div>  
-        
+        </div>
     )
 }
 

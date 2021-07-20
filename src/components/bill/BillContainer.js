@@ -45,7 +45,7 @@ const BillContainer = (props) => {
 
     return (
         <div className='container'>
-            <h2 className="mx-2">Manage your bills</h2>
+            <h4><center>Manage your bills</center></h4>
             {bills.length > 0 ? (
                 <>
                     <BillList

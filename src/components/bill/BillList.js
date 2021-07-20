@@ -7,17 +7,15 @@ const BillList = ({bills, dateFormatter, findCustomer, customers, handleInvoice,
         padding:'10px',
         paddingTop:'30px',
         backgroundColor:'white',
-        width:'90vw',
-        minHeight:'80vh',
         boxShadow: '0 5px 5px -5px #888888'
     }
 
     return (
         <div style={tableStyle}>
-            <table border={1} className='table table-striped text-center' size="sm">
+            <table border={1} className='table table-striped'>
                 <thead>
                     <tr>
-                        <th>SlNo</th>
+                        <th>#</th>
                         <th>Date</th>
                         <th>Customer(Name)</th>
                         <th>Customer(Mobile)</th>
