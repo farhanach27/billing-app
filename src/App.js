@@ -1,12 +1,9 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Routes from './components/helpers/Routes';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { setLoginStatus } from './actions/userAuthActions';
-import NavBar from './components/NavBar';
-
+import NavBar from './components/commons/NavBar';
 
 const App = () => {
 

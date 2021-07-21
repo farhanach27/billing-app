@@ -1,11 +1,8 @@
 import { useSelector } from "react-redux";
-import { Switch, Route } from "react-router";
-import { Link, Redirect } from "react-router-dom";
-
-
-
+import { Switch} from "react-router";
 import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
+
 import Login from "../userAuth/Login";
 import Register from "../userAuth/Register";
 import Account from "../account/Account";

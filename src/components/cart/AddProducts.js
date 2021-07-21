@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { Hint } from 'react-autocomplete-hint'
 import { useSelector } from 'react-redux'
 import {MdIndeterminateCheckBox, MdAddBox} from 'react-icons/md'
-import { Button } from 'react-bootstrap'
 
 const AddProducts = (props) => {
     const products = useSelector(state=>state.products)
@@ -91,18 +90,6 @@ const AddProducts = (props) => {
             }
         }).filter(ele=>ele)
         addLineItem(lineItems)
-    }
-
-    const btnStyles = {
-        border: 'transparent',
-        
-        color: '#007bff'
-    }
-
-    const btnDangerStyles = {
-        border: 'transparent',
-        
-        color: '#dc3545'
     }
 
     return (

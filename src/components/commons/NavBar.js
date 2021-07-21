@@ -3,10 +3,10 @@ import {FiLogOut} from 'react-icons/fi'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import swal from 'sweetalert';
-import { resetAccountInfo, resetLogInStatus } from '../actions/userAuthActions';
-import Routes from './helpers/Routes';
+import { resetAccountInfo, resetLogInStatus } from '../../actions/userAuthActions';
+import Routes from '../helpers/Routes';
 import {MdShoppingCart, MdAccountCircle, MdGridOn} from 'react-icons/md';
-import {FaReceipt, FaUsers, FaMoneyBillWave, FaShoppingBasket} from 'react-icons/fa';
+import {FaReceipt, FaUsers,FaShoppingBasket} from 'react-icons/fa';
 
 const NavBar = () => {
 
@@ -43,10 +43,8 @@ const NavBar = () => {
                 </div>
             ) : (
                 <div>
-                    <Link to='/'></Link>
-                    <Link to='/register'></Link>
+                   
                 </div>
-                
             )
         }
 

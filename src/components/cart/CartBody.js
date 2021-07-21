@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Hint } from 'react-autocomplete-hint'
 import { useSelector, useDispatch } from 'react-redux'
-import { AiOutlineUsergroupAdd} from 'react-icons/ai'
 import { withRouter } from 'react-router'
 import { Button } from 'react-bootstrap'
 import AddProducts from './AddProducts'

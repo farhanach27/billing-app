@@ -16,7 +16,7 @@ const StatsContainer = (props) => {
     const totalProductsInInventory = products.length
 
     return (
-        <div className="mx-4">
+        <div className="mx-4 justify-content-between">
             { customers && bills && products ?
             <>
                 <div className="row d-flex mt-2 ml-1">
@@ -37,7 +37,7 @@ const StatsContainer = (props) => {
                     <div className="col-3 mr-5">
                         <CustomerChart bills={bills} customers={customers}/>
                     </div>
-                    <div style={{backgroundColor:'white'}} className="col-8 table-top-bills ml-5">
+                    <div style={{backgroundColor:'white'}} className="col-8 ml-5">
                         <p className='text-center' style={{textDecoration:'underline'}}><b>Top 5 products</b></p>
                         <TopProductsSold products={products} bills={bills}/>                   
                     </div>

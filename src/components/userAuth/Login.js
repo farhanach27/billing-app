@@ -38,8 +38,8 @@ const Login  = (props) => {
             <div className='row'>
             <Formik 
                 initialValues={{
-                    email: '',
-                    password: '',
+                    email: 'pappu@gmail.com',
+                    password: '12345678',
                 }}
                 validationSchema={validate}
                 onSubmit={(values, onSubmitProps) => {
@@ -57,8 +57,9 @@ const Login  = (props) => {
                 {formik => (
 
                     <div >
-                        <div className='col-sm-6'>
-                        <p>Sign Up with Us and find solution for your  Business</p>
+                        <div className='col-sm-6 align-items-center'>
+                        <p>Sign Up with us</p>
+                        <p>find solution for your  Business</p>
                         </div>
                         
                         <div className='form-group login-form col-sm-6'>

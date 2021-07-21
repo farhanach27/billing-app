@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Button } from 'react-bootstrap';
 import EditProduct from './EditProduct';
 import RemoveProduct from './RemoveProduct';
 import {MdEdit} from 'react-icons/md'

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Table } from 'react-bootstrap'
-//import '../../styles/dashboardStyles/statsContainer.css'
 import { dateFormatter } from '../helpers/helperFunctions'
 
 const TableTopOrders = ({bills, customers}) => {
@@ -15,8 +14,8 @@ const TableTopOrders = ({bills, customers}) => {
 
     return (
         <div className="text-center">
-            <strong className="my-3">Highest transactions</strong>
-            <Table className="mt-1" size="md">
+            <strong>Highest transactions</strong>
+            <Table className="mt-1" size="sm">
                 <thead>
                     <tr>
                         <th>#</th>

@@ -1,5 +1,5 @@
-
-import { Button, Modal } from "react-bootstrap";
+import React from 'react'
+import {Modal } from "react-bootstrap";
 import CustomerForm from "./CustomerForm";
 
 const EditCustomer = ({customer, ...props}) => {
