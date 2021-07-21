@@ -42,7 +42,11 @@ const NavBar = () => {
                 
                 </div>
             ) : (
-                null
+                <div>
+                    <Link to='/'></Link>
+                    <Link to='/register'></Link>
+                </div>
+                
             )
         }
 
