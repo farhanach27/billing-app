@@ -23,7 +23,7 @@ export const startRegisterUser = (userData, history) => {
 }
 
 
-export const startLoginUser = (userData, history, handleServerErrors) => {
+export const startLoginUser = (userData, redirect, handleServerErrors, onSubmitProps) => {
     return (dispatch) => {
         axios.post('/api/users/login', userData)
            .then( (res) => {
@@ -35,23 +35,15 @@ export const startLoginUser = (userData, history, handleServerErrors) => {
                    
                     swal('Successfully', 'Logged In', 'success')
                     localStorage.setItem('token', result.token)
-                    Promise.all([
-                        axios.get('api/customers'),
-                        axios.get('api/products'),
-                        axios.get('api/bills')
-                    ]).then((values) => {
-                        const [customers, products, bills] = values
-                        dispatch(getAllCustomers(customers));
-                        dispatch(getAllProducts(products));
-                        dispatch(getAllBills(bills))
-                    })
-                    // dispatch(setLoginStatus())
-                    // dispatch(startGetUserDetails())
-                    // dispatch(startGetAllCustomers())
-                    // dispatch(startGetAllProducts())
-                    // dispatch(startGetAllBills())
-                    history.push('/dashboard')
+                    dispatch(setLoginStatus())
+                    dispatch(startGetUserDetails())
+                    dispatch(startGetAllCustomers())
+                    dispatch(startGetAllProducts())
+                    dispatch(startGetAllBills())
+                    redirect()
+                    onSubmitProps.resetForm()
                     window.location.reload()
+
                    
                 }
             })

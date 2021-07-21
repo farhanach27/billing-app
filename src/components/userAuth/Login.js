@@ -46,8 +46,12 @@ const Login  = (props) => {
                     const handleServerErrors = (err) =>{
                         setServerErrors(err)
                     }
-                    dispatch(startLoginUser(values, props.history, handleServerErrors));
-                    onSubmitProps.resetForm();
+
+                    const redirect = () => {
+                        props.history.push('/dashboard')
+                    }
+
+                    dispatch(startLoginUser(values, redirect, handleServerErrors, onSubmitProps));
                 }}
             >
                 {formik => (
