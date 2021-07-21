@@ -10,7 +10,8 @@ export const startGetAllCustomers = () => {
             if(result.hasOwnProperty('message')){
                 swal('Error', result.message ,'error')
             } else {
-                dispatch({type :'GET_ALL_CUSTOMERS', payload: result})
+                
+                dispatch(getAllCustomers(result))
                 // props.history.push('/')
             }
         })
@@ -21,6 +22,12 @@ export const startGetAllCustomers = () => {
     }
 }
 
+export const getAllCustomers = (customers) => {
+    return {
+        type :'GET_ALL_CUSTOMERS', 
+        payload: customers
+    }
+}
 
 export const startAddCustomer = (customerData) => {
     return (dispatch) => {

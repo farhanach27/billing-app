@@ -50,7 +50,7 @@ const deleteBill = (id) => {
     }
 }
 
-const getAllBills = (bills) => {
+export const getAllBills = (bills) => {
     return {
         type: 'ALL_BILLS',
         payload: bills

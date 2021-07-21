@@ -1,8 +1,8 @@
 import axios from '../config/axiosConfig';
 import swal from 'sweetalert';
-import { startGetAllCustomers } from './customerActions';
-import { startGetAllProducts } from './productsActions';
-import { startGetAllBills } from './billsActions';
+import { getAllCustomers, startGetAllCustomers } from './customerActions';
+import { getAllProducts, startGetAllProducts } from './productsActions';
+import { getAllBills, startGetAllBills } from './billsActions';
 
 export const startRegisterUser = (userData, history) => {
     return ( 
@@ -32,15 +32,27 @@ export const startLoginUser = (userData, history, handleServerErrors) => {
                 if(result.hasOwnProperty('errors')){
                     handleServerErrors(result)
                 } else {
+                   
                     swal('Successfully', 'Logged In', 'success')
                     localStorage.setItem('token', result.token)
-                    dispatch(setLoginStatus())
+                    Promise.all([
+                        axios.get('api/customers'),
+                        axios.get('api/products'),
+                        axios.get('api/bills')
+                    ]).then((values) => {
+                        const [customers, products, bills] = values
+                        dispatch(getAllCustomers(customers));
+                        dispatch(getAllProducts(products));
+                        dispatch(getAllBills(bills))
+                    })
+                    // dispatch(setLoginStatus())
+                    // dispatch(startGetUserDetails())
+                    // dispatch(startGetAllCustomers())
+                    // dispatch(startGetAllProducts())
+                    // dispatch(startGetAllBills())
                     history.push('/dashboard')
                     window.location.reload()
-                    dispatch(startGetUserDetails())
-                    dispatch(startGetAllCustomers())
-                    dispatch(startGetAllProducts())
-                    dispatch(startGetAllBills())
+                   
                 }
             })
             .catch( (err) => {

@@ -10,7 +10,7 @@ export const startGetAllProducts = () => {
             if(result.hasOwnProperty('message')){
                 swal('Error', result.message ,'error')
             } else {
-                dispatch({type :'GET_ALL_PRODUCTS', payload: result})
+                dispatch(getAllProducts(result))
                 // props.history.push('/')
             }
         })
@@ -18,6 +18,13 @@ export const startGetAllProducts = () => {
             swal('Error', 'some error in data','error')
             
         })
+    }
+}
+
+export const getAllProducts = (products) => {
+    return {
+        type :'GET_ALL_PRODUCTS', 
+        payload: products
     }
 }
 
