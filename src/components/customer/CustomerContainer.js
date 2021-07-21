@@ -11,7 +11,7 @@ const CustomerContainer = (props) => {
         <div className='container'>
             <div className='row'>
                 <div className='col-md-3'>
-                    <h4 >Add new customer</h4>
+                    <h4 className='text-center'>Add new customer</h4>
                     <CustomerForm />
                 </div>
                 <div className='col-md-2'>

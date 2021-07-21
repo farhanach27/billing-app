@@ -6,6 +6,7 @@ import { Button } from 'react-bootstrap'
 import AddProducts from './AddProducts'
 import { startCreateBill } from '../../actions/billsActions'
 import InvoiceModal from '../commons/InvoiceModal'
+import swal from 'sweetalert'
 
 
 const CartBody = (props) => {
@@ -53,7 +54,7 @@ const CartBody = (props) => {
             setName('')
             setMobile('')
         } else {
-            alert('empty fields')
+            swal('Error', 'Enter customer and product details', 'warning')
         }
     }
 

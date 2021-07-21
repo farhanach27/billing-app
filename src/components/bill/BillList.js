@@ -1,5 +1,6 @@
 import React from 'react';
 import {MdDelete} from 'react-icons/md';
+import {FaFileInvoiceDollar} from 'react-icons/fa'
 
 const BillList = ({bills, dateFormatter, findCustomer, customers, handleInvoice, handleDelete}) => {
 
@@ -32,7 +33,7 @@ const BillList = ({bills, dateFormatter, findCustomer, customers, handleInvoice,
                                 <td>{findCustomer(ele.customer, customers).name}</td>
                                 <td>{findCustomer(ele.customer, customers).mobile}</td>
                                 <td>{ele.total}</td>
-                                <td style={{textAlign:'center'}}><a href="#" onClick={()=>handleInvoice(ele)}> invoice</a>&nbsp;<button style={{color:'red'}} className='btn' onClick={()=>handleDelete(ele._id)}><MdDelete size='1.5rem'/></button></td>
+                                <td style={{textAlign:'center'}}><a href="#" onClick={()=>handleInvoice(ele)}> <FaFileInvoiceDollar size='1.2rem' /></a>&nbsp;<button style={{color:'red'}} className='btn' onClick={()=>handleDelete(ele._id)}><MdDelete size='1.5rem'/></button></td>
                             </tr>
                         )
                     })}

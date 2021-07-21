@@ -57,9 +57,11 @@ const Login  = (props) => {
                 {formik => (
 
                     <div >
-                        <div className='col-sm-6 align-items-center'>
-                        <p>Sign Up with us</p>
-                        <p>find solution for your  Business</p>
+                        <div className='col-sm-6 align-items-center' style={{fontFamily:'Lucida Handwriting', color:'#FFFF2'}}>
+                        <h2>Have you registered already?</h2>
+                        <p>Login to access to your business data</p>
+                        <p>and with amazing features grow your business</p>
+                        
                         </div>
                         
                         <div className='form-group login-form col-sm-6'>
