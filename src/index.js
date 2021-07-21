@@ -30,7 +30,7 @@ store.subscribe(() => {
 
 ReactDOM.render(
     <Provider store = {store}>
-      <BrowserRouter forceRefresh={true}>
+      <BrowserRouter>
         <App />
       </BrowserRouter>
     </Provider>
