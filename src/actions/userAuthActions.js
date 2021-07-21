@@ -42,7 +42,7 @@ export const startLoginUser = (userData, redirect, handleServerErrors, onSubmitP
                     dispatch(startGetAllBills())
                     redirect()
                     onSubmitProps.resetForm()
-                    // window.location.reload()
+                    window.location.reload()
 
                    
                 }
