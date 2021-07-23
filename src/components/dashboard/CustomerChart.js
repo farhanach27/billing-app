@@ -19,14 +19,14 @@ const CustomerChart = ({customers, bills}) => {
     function drawChart() {
     const data = GoogleCharts.api.visualization.arrayToDataTable([
         ['multiple orders', 'one order'],
-        ['Returning customers', returningCustomers],
+        ['frequent customers', returningCustomers],
         ['total customers', totalCustomers]
     ]);
 
     const options = {
         backgroundColor: 'white',
         pieHole: 0.4,
-        title:'Returning customers'
+        title:'Frequent Customers'
     }
 
     const pie_1_chart = new GoogleCharts.api.visualization.PieChart(document.getElementById('piechart'));
