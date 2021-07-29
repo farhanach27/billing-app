@@ -84,7 +84,7 @@ const Login  = (props) => {
                 )}
             </Formik>
 
-            <div class="card bg-light mt-3 border-success" style={{width: '21rem'}}>
+            <div class="card bg-light mt-3 border-success" style={{width: '24rem'}}>
                 <div class="card-header text-success"><i>Can use the below given user credential's or create new account.</i></div>
                 <div class="card-body">
                     <p class="card-text"><b>email: </b>'pappu@gmail.com'</p>
