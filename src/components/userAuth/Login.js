@@ -38,8 +38,8 @@ const Login  = (props) => {
             <div className='row'>
             <Formik 
                 initialValues={{
-                    email: 'pappu@gmail.com',
-                    password: '12345678',
+                    email: '',
+                    password: '',
                 }}
                 validationSchema={validate}
                 onSubmit={(values, onSubmitProps) => {
@@ -83,6 +83,14 @@ const Login  = (props) => {
                     </div>
                 )}
             </Formik>
+
+            <div class="card bg-light mt-3 border-success" style={{width: '21rem'}}>
+                <div class="card-header text-success"><i>Can use the below given user credential's or create new account.</i></div>
+                <div class="card-body">
+                    <p class="card-text"><b>email: </b>'pappu@gmail.com'</p>
+                    <p class="card-text"><b>password: </b>'12345678'</p>
+                </div>
+                </div>
             </div>
             
         </div>  

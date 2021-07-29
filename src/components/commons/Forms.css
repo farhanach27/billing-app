@@ -9,6 +9,12 @@
     transition: all .3s;
 }
 
+.card {
+    margin: auto; 
+    border-radius: 10px;
+}
+
+
 .customer-form, .product-form {
     width: fit-content;
     height: fit-content;
