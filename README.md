@@ -18,4 +18,4 @@ This web app resolves the billing issues for business. It helps to create the cu
 •	Connected synchronous and asynchronous action using redux-thunk.
 
 #### Packages used:
-axios, react, react-dom,  react-icons, react-bootstrap, formik, yup, react-router-dom, redux, react-redux, redux-thunk
+axios, react, react-dom,  react-icons, react-bootstrap, formik, yup, react-router-dom, redux, react-redux, redux-thunk, react-to-pdf
