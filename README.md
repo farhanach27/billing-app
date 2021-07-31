@@ -3,12 +3,16 @@ This web app resolves the billing issues for business. It helps to create the cu
  
 **netlify link:** https://my-billing-app.netlify.app/ 
 
-### Features:								     
+**Features:**								     
 •	Built Front-end using ReactJs.
+
 •	Application state is maintained in the redux.
+
 •	Forms and their validations were created using formik and yup.
+
 •	Used icons from react-icons.
+
 •	Connected synchronous and asynchronous action using redux-thunk.
 
-### Packages used: 
+**Packages used: **
 axios, react, react-dom,  react-icons, react-bootstrap, formik, yup, react-router-dom, redux, react-redux, redux-thunk
