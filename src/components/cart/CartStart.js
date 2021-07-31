@@ -8,7 +8,7 @@ const CartStart = (props) => {
     return (
         <div style={{display:'flex', justifyContent:'space-between',margin:'20px'}}>
             
-            <div className="form-group  justify-content-start">
+            <div className="form-group justify-content-start">
                 <label>Business-Name:</label>
                 <h6>{accountInfo.businessName} - {accountInfo.address}</h6>
             </div>

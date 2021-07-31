@@ -93,25 +93,22 @@ const AddProducts = (props) => {
     }
 
     return (
-        <div className="pt-3">
+        <div >
             { productDetails.map((ele,i)=>{
                     return (
                         <div key={i}>
                             <div className="row align-items-end m-3" key={i}> 
                                 <div className="col-4">
-                                    <label>Product name</label>
                                     <Hint options={productNames}>
                                         <input className="form-control" type="text" name="name" value={ele.name} onBlur={(e)=>handleAutoFill(e, i)} onChange={(e)=>handleChange(e, i)} />
                                     </Hint>
                                 </div>
                                 <div className="col-4">
-                                    <label>Quantity</label>
                                     <input className="form-control" type="number" name="quantity" value={ele.quantity} onChange={(e)=>handleChange(e, i)} onBlur={(e)=>handleBlur(e, i)}/>
                                 </div>
                                 <div className="col-2">
-                                    <label>Sub total</label>
                                     <input className="form-control" type="text" name="subTotal" value={ele.subTotal} disabled={true}/>
-                                </div>
+                                </div> 
                                 <div className="col-2">
                                     {
                                         productDetails.length > 1 && 
@@ -119,7 +116,7 @@ const AddProducts = (props) => {
                                     }
                                     {
                                         i === productDetails.length - 1 &&
-                                        <button style={{color:'green'}} className="btn col-1 w-75 mx-4" onClick={handleAddLineItem}><MdAddBox/></button>
+                                        <button style={{color:'green'}} className="btn col-1 w-75 mx-1 mb-2" onClick={handleAddLineItem}><MdAddBox/></button>
                                     }
                                     </div>
                                 </div>
@@ -130,7 +127,7 @@ const AddProducts = (props) => {
             }
             <div className="row justify-content-end align-items-center my-4 mx-4">
                 <label className="mx-2 my-1">Total</label>
-                <input className="form-control col-2" type="text" value={total} disabled={true} />    
+                <input className="form-control col-2 justify-content-center" type="text" value={total} disabled={true} />    
             </div>
         </div>
     )

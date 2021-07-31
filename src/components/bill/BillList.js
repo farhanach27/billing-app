@@ -18,10 +18,10 @@ const BillList = ({bills, dateFormatter, findCustomer, customers, handleInvoice,
                     <tr>
                         <th>#</th>
                         <th>Date</th>
-                        <th>Customer(Name)</th>
-                        <th>Customer(Mobile)</th>
+                        <th>Customer Name</th>
+                        <th>Mobile</th>
                         <th>Total</th>
-                        <th>Actions</th>
+                        <th>actions</th>
                     </tr>
                 </thead>
                 <tbody>

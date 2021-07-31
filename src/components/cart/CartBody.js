@@ -54,7 +54,7 @@ const CartBody = (props) => {
             setName('')
             setMobile('')
         } else {
-            swal('Error', 'Enter customer and product details', 'warning')
+            swal('Error', 'Enter customer and product details', 'error')
         }
     }
 
@@ -72,6 +72,18 @@ const CartBody = (props) => {
                     <input className="form-control" type="text" defaultValue={name} disabled={true}/>
                 </div>
             </form>
+            <div className="row align-items-end m-3" >
+            
+                <div className="col-4">
+                    <label>Product name</label> 
+                </div>
+                <div className="col-4">
+                    <label>Quantity</label>
+                </div>
+                <div className="col-2">
+                    <label>Sub total</label>
+                </div>
+            </div>
 
             <AddProducts
                 addLineItem={addLineItem} modalShow={modalShow}

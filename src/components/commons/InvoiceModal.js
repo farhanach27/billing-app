@@ -6,10 +6,11 @@ import CartStart from "../cart/CartStart";
 
  
 const InvoiceModal = (props) => {
-  const { customer, date, lineItems } = props
+  const { customer,  date, lineItems } = props
 
   const customers = useSelector(state=>state.customers)
   const products = useSelector(state=>state.products)
+  const accountInfo = useSelector(state=>state.accountInfo)
 
   const printComponentRef = useRef()
 
@@ -57,7 +58,18 @@ const InvoiceModal = (props) => {
         <Modal.Body ref={printComponentRef} style={{margin:"0", padding:"10px", border:'1px solid #eee'}}>
           <div className="row m-1">
             <div className="flex-column col-12">
-              <CartStart />
+              <div style={{display:'flex', justifyContent:'space-between',margin:'20px'}}>
+             
+                  <div className="form-group  justify-content-start">
+                      <label>Business-Name:</label>
+                      <h6>{accountInfo.businessName} - {accountInfo.address}</h6>
+                  </div>
+                                       
+                  <div className="form-group  justify-content-end">
+                      <label >Invoice Date:</label>
+                      <h6>{date}</h6>
+                  </div>
+              </div>
               <div className="mx-4">
                 <strong>Customer Details:</strong>
                 <div className="p-2">
