@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux'
 import { useRef } from "react";
 import { useReactToPrint } from "react-to-print";
 import CartStart from "../cart/CartStart";
+import { dateFormatter } from "../helpers/helperFunctions";
+import moment from "moment";
 
  
 const InvoiceModal = (props) => {
@@ -66,8 +68,19 @@ const InvoiceModal = (props) => {
                   </div>
                                        
                   <div className="form-group  justify-content-end">
-                      <label >Invoice Date:</label>
-                      <h6>{date}</h6>
+                      {moment(date, 'DD-MM-YYYY', true).isValid() ? (
+                        <>
+                          <label >Invoice Date:</label>
+                          <h6>{date}</h6>
+                        </>
+
+                      ) : (
+                        <>
+                          <label >Invoice Date:</label>
+                          <h6>{moment(date).format('DD-MM-YYYY')}</h6>
+                        </>
+                      )
+                      }
                   </div>
               </div>
               <div className="mx-4">
