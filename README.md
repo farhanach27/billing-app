@@ -1,4 +1,4 @@
-# About Project
+## About Project
 ### Title: Billing-App
 
 This web app resolves the billing issues for business. It helps to create the customers, products along with its prices and then create bills for the customers according to the products bought. It provides user to register and then login into application. It has options to edit customers and products details or delete them. This app helps user to keep record of all bills and to manage it.
