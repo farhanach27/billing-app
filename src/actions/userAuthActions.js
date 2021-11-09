@@ -1,8 +1,8 @@
 import axios from '../config/axiosConfig';
 import swal from 'sweetalert';
-import { getAllCustomers, startGetAllCustomers } from './customerActions';
-import { getAllProducts, startGetAllProducts } from './productsActions';
-import { getAllBills, startGetAllBills } from './billsActions';
+import { startGetAllCustomers } from './customerActions';
+import { startGetAllProducts } from './productsActions';
+import { startGetAllBills } from './billsActions';
 
 export const startRegisterUser = (userData, history) => {
     return ( 

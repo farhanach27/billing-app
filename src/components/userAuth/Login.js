@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import '../commons/Forms.css'
-import { useDispatch, useSelector } from 'react-redux';
-import { Link, Redirect} from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { Link} from 'react-router-dom';
 import TextField from '../commons/TextField';
 import { startLoginUser } from '../../actions/userAuthActions';
+import { BiErrorCircle } from 'react-icons/bi'
 
 
 const Login  = (props) => {
@@ -14,7 +15,7 @@ const Login  = (props) => {
     const dispatch = useDispatch();
 
     useEffect (() => {
-        const timeout = setTimeout(() => {
+        setTimeout(() => {
              setServerErrors({})
         }, 15000);
         
@@ -73,7 +74,7 @@ const Login  = (props) => {
                                 <button className='btn btn-primary mt-3' type='submit'> Log in </button>
                                 {serverErrors.hasOwnProperty('errors') &&
                                     <>
-                                        <p className='mt-3 text-center error'>{serverErrors.errors}</p>  
+                                        <p className='mt-3 text-center error'><BiErrorCircle size='1.2rem'/>  {serverErrors.errors}</p>  
                                     </>
                                 }                       
                             </Form>

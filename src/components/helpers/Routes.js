@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import { Switch} from "react-router";
 import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
@@ -15,9 +15,9 @@ import DashboardContainer from "../dashboard/DashboardContainer";
 
 const Routes = () => {
 
-    const loginStatus = useSelector((state) => {
-        return state.loginStatus;
-    })
+    // const loginStatus = useSelector((state) => {
+    //     return state.loginStatus;
+    // })
 
     return ( 
         <div>

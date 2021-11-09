@@ -2,7 +2,7 @@ import React from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import '../commons/Forms.css'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import TextField from '../commons/TextField';
 import { Modal } from 'react-bootstrap';
 import { startAddProduct, startUpdateProduct } from '../../actions/productsActions';
