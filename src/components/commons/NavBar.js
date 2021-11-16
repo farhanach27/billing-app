@@ -35,11 +35,9 @@ const NavBar = () => {
                                     dispatch(resetAccountInfo())
                         }}>
                             <FiLogOut size='1.5rem'/> 
-                        </button>     
-                        
+                        </button>                             
                     </nav>    
                 </header>    
-                
                 </div>
             ) : (
                 <div> 

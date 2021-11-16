@@ -7,7 +7,7 @@ import { Link} from 'react-router-dom';
 import TextField from '../commons/TextField';
 import { startLoginUser } from '../../actions/userAuthActions';
 import { BiErrorCircle } from 'react-icons/bi'
-
+    
 
 const Login  = (props) => {
     const[serverErrors, setServerErrors] = useState({})
@@ -15,14 +15,12 @@ const Login  = (props) => {
     const dispatch = useDispatch();
 
     useEffect (() => {
-        setTimeout(() => {
+        const timeout = setTimeout(() => {
              setServerErrors({})
         }, 15000);
         
     },[serverErrors]);
     
-
-
     const validate = Yup.object({
         email: Yup.string()
             .email('Email is invalid')
@@ -31,8 +29,6 @@ const Login  = (props) => {
             .min(8, 'Password must be at least 8 characters')
             .required('Password is required')
     })
-
-   
 
     return (
         <div className='container'>
@@ -74,7 +70,7 @@ const Login  = (props) => {
                                 <button className='btn btn-primary mt-3' type='submit'> Log in </button>
                                 {serverErrors.hasOwnProperty('errors') &&
                                     <>
-                                        <p className='mt-3 text-center error'><BiErrorCircle size='1.2rem'/>  {serverErrors.errors}</p>  
+                                        <p className='mt-3 text-center error'><BiErrorCircle size='1rem'/>  {serverErrors.errors}</p>  
                                     </>
                                 }                       
                             </Form>

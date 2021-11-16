@@ -8,7 +8,6 @@ import { startRegisterUser } from '../../actions/userAuthActions';
 import TextField from '../commons/TextField';
 import TextArea from '../commons/TextArea';
 
-
 const Register  = (props) => {
 
     const formStyle = {
@@ -30,8 +29,6 @@ const Register  = (props) => {
             .min(8, 'Password must be at least 8 characters')
             .required('Password is required')
     })
-
-   
 
     return (
         <div style={formStyle}>
